@@ -1,10 +1,26 @@
-<div>
-  <form action="">
-    <input type="text" name="" id="" [(ngModel)]="restTime" placeholder="Seconds resting">
-    <input type="text" name="" id="" [(ngModel)]="serieTime" placeholder="Seconds executing serie">
+<div class="text-center">
+  <h2>Chronometer for Fitness Series</h2>
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Seconds doing serie</label>
+      <input type="text" class="form-control form-control-lg text-center" name="serieTime" id="" [(ngModel)]="serieTime"
+        placeholder="Seconds executing serie">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Seconds resting between series</label>
+      <input type="text" class="form-control form-control-lg text-center" name="restTime" id="" [(ngModel)]="restTime"
+        placeholder="Seconds resting">
+    </div>
+
   </form>
+  <div>
+    <h1 class="display-1 text-center">{{ chronometer }}</h1>
+  </div>
+
+  <button class="form-control btn btn-lg btn-danger text-center" (click)="startStop()">{{ buttonText }}</button>
 </div>
-<div>
-  <div id=""></div>
-  <div id=""></div>
-</div>
+
+<p class="display-2 text-center">
+  {{ message }}
+</p>
